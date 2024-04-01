@@ -3,6 +3,8 @@ import "./grilla-personajes.css";
 import TarjetaPersonaje from "./tarjeta-personaje.componente";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../store/store";
+import { AppDispatch } from "../../store/store";
 
 /**
  * Grilla de personajes para la pagina de inicio
@@ -12,10 +14,10 @@ import { useDispatch, useSelector } from "react-redux";
  *
  * @returns un JSX element
  */
+
 const GrillaPersonajes = () => {
-  const dispatch = useDispatch();
-  // Obten los personajes desde el estado
-  const personajes = useSelector((state) => state.personajes.lista);
+  const dispatch = useDispatch<AppDispatch>();
+  const personajes = useSelector((state: RootState) => state.personajes.lista);
 
   useEffect(() => {
     dispatch(cargarPersonajes());
@@ -23,9 +25,9 @@ const GrillaPersonajes = () => {
 
   return (
     <div className="grilla-personajes">
-      <TarjetaPersonaje />
-      <TarjetaPersonaje />
-      <TarjetaPersonaje />
+      {personajes.map((personaje) => (
+        <TarjetaPersonaje key={personaje.id} personaje={personaje} />
+      ))}
     </div>
   );
 };
