@@ -11,12 +11,24 @@ interface PersonajeState {
   lista: Personaje[];
   cargando: boolean;
   error: string | null;
+  apiInfo: {
+    count: number;
+    next: string;
+    pages: number;
+    prev: string;
+  };
 }
 
 const initialState: PersonajeState = {
   lista: [],
   cargando: false,
   error: null,
+  apiInfo: {
+    count: 0,
+    next: "",
+    pages: 0,
+    prev: "",
+  },
 };
 
 // Define el reducer
@@ -37,6 +49,7 @@ const personajesReducer = (
         lista: action.payload,
         cargando: false,
         error: null,
+        
       };
     case CARGAR_PERSONAJES_ERROR:
       return {
