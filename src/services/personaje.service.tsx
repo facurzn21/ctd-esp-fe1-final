@@ -7,7 +7,7 @@ export const getPersonajes = async (
   let params = `?page=${pagina}`;
 
   if (nombre) {
-    params += `&name=${nombre}`;
+    params += `&name=${nombre}`; // agrega el nombre a los parámetros de consulta si está presente
   }
 
   const response = await fetch(

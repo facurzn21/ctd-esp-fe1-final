@@ -12,3 +12,4 @@ export default interface Personaje {
   url?: string;
   created?: string;
 }
+
