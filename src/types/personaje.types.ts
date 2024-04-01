@@ -11,5 +11,5 @@ export default interface Personaje {
   episode?: string[];
   url?: string;
   created?: string;
+  esFavorito: boolean;
 }
-

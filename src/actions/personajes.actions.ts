@@ -7,7 +7,6 @@ export const CARGAR_PERSONAJES_INICIO = "CARGAR_PERSONAJES_INICIO";
 export const CARGAR_PERSONAJES_EXITO = "CARGAR_PERSONAJES_EXITO";
 export const CARGAR_PERSONAJES_ERROR = "CARGAR_PERSONAJES_ERROR";
 
-
 // Define las interfaces para cada acción:
 interface CargarPersonajesInicioAction {
   type: typeof CARGAR_PERSONAJES_INICIO;
@@ -29,7 +28,7 @@ export type PersonajeActionTypes =
   | CargarPersonajesExitoAction
   | CargarPersonajesErrorAction;
 
-  export type DispatchType = (args: PersonajeActionTypes) => void;
+export type DispatchType = (args: PersonajeActionTypes) => void;
 
 // Define las acciones:
 export const cargarPersonajesInicio = (): PersonajeActionTypes => ({
@@ -55,7 +54,13 @@ export const cargarPersonajes = (nombre?: string) => {
 
     try {
       const personajes = await getPersonajes(nombre); // pasa el nombre a la función getPersonajes
-      dispatch(cargarPersonajesExito(personajes));
+
+      const personajesConFavorito = personajes.map((personaje) => ({
+        ...personaje,
+        esFavorito: false,
+      })); // agregas esFavorito a cada personaje
+
+      dispatch(cargarPersonajesExito(personajesConFavorito));
     } catch (error: any) {
       dispatch(cargarPersonajesError((error as Error).toString()));
     }

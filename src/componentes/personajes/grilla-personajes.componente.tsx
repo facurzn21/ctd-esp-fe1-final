@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import { AppDispatch } from "../../store/store";
 
+
 /**
  * Grilla de personajes para la pagina de inicio
  *
