@@ -34,3 +34,8 @@ const GrillaPersonajes = () => {
 };
 
 export default GrillaPersonajes;
+
+/**
+ * Componente de GrillaPersonajes que muestra una grilla de personajes y se encarga de cargar la información de los personajes desde el estado global.
+ * @returns {JSX.Element} - Elemento JSX que representa la grilla de personajes.
+ */

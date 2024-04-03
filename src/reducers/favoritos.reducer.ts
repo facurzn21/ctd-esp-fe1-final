@@ -25,3 +25,12 @@ export const favoritoSlice = createSlice({
 });
 
 export default favoritoSlice.reducer;
+
+/**
+ *  Reductor de favoritos que se encarga de agregar y eliminar personajes a la lista de favoritos.
+ * Componente redux slice que gestiona una lista de personajes favoritos en el estado global.
+ * Proporciona reductores para agregar un personaje a los favoritos y remover un personaje de los favoritos.
+ * El estado de los 'favoritos' es una lista de objetos de personajes.
+ * El estado inicial de los 'favoritos' es una lista vacía.
+ * @returns {FavoritoState} - El estado inicial de los 'favoritos' y los reductores para agregar y remover personajes de los favoritos.
+ */

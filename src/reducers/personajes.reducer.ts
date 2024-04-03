@@ -63,3 +63,10 @@ const personajesReducer = (
 };
 
 export default personajesReducer;
+
+/**
+ * Reductor de personajes que controla el estado de la lista de personajes, incluyendo la carga, éxito o error al interactuar con la API.
+ * @param {PersonajeState} state - Estado actual de la lista de personajes.
+ * @param {PersonajeActionTypes} action - Acción a ser realizada en el estado.
+ * @returns {PersonajeState} - Nuevo estado de la lista de personajes luego de aplicar la acción.
+ */

@@ -48,3 +48,9 @@ const TarjetaPersonaje: React.FC<TarjetaPersonajeProps> = ({ personaje }) => {
   );
 };
 export default TarjetaPersonaje;
+
+/**
+ * Componente de TarjetaPersonaje que muestra la información de un personaje y permite gestionar si es marcado como favorito o no.
+ * @param {TarjetaPersonajeProps} props - Propiedades del componente que incluyen la información del personaje.
+ * @returns {JSX.Element} - Elemento JSX que representa la tarjeta del personaje.
+ */

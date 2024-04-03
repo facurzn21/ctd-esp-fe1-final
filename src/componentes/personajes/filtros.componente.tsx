@@ -35,3 +35,9 @@ const Filtros = () => {
 };
 
 export default Filtros;
+
+/**
+ * Componente de Filtros que permite al usuario filtrar la lista de personajes por nombre y limpiar los filtros aplicados.
+ * Además, actualiza la lista de personajes en función del filtro ingresado.
+ * @returns {JSX.Element} - Elemento JSX que contiene los campos de filtro y botones de limpieza de filtros.
+ */

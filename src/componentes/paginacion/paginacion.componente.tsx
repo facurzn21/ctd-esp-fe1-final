@@ -45,3 +45,10 @@ const Paginacion = (): JSX.Element => {
 };
 
 export default Paginacion;
+
+/**
+ * Componente de Paginación que permite a los usuarios navegar entre las páginas de personajes de la API de Rick and Morty.
+ * Dispone botones para moverse a la página anterior y siguiente de la lista de personajes.
+ * El botón de 'Anterior' se desactiva cuando no hay más páginas anteriores y el botón 'Siguiente' se desactiva cuando no hay más páginas siguientes.
+ * @returns {JSX.Element} - Elemento JSX que representa los botones de paginación.
+ */

@@ -13,3 +13,7 @@ export default interface Personaje {
   created?: string;
   esFavorito: boolean;
 }
+/**
+ * Personaje es una interfaz que define la estructura de un personaje para el programa. 
+ * Incluye su id, nombre, estado, especie, tipo, género, origen, ubicación, imagen, episodios, URL, la fecha de creación y si ha sido marcado como favorito.
+ */

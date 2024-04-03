@@ -66,3 +66,17 @@ export const cargarPersonajes = (nombre?: string) => {
     }
   };
 };
+
+/**
+ * Conjunto de acciones y disparadores de acciones en Redux para cargar personajes de la API de Rick and Morty.
+ *
+ * Incluye las siguientes acciones:
+ *
+ * 1. `CARGAR_PERSONAJES_INICIO`: Se dispara al comienzo de la solicitud de cargar personajes.
+ * 2. `CARGAR_PERSONAJES_EXITO`: Se dispara cuando la solicitud de cargar personajes se completa con éxito. Devuelve la lista de personajes.
+ * 3. `CARGAR_PERSONAJES_ERROR`: Se dispara cuando la solicitud de cargar personajes arroja un error. Devuelve el error.
+ *
+ * También incluye la acción `cargarPersonajes` asincrónica (thunk) que realiza la solicitud a la API, maneja los estados de inicio, éxito o error, y agrega el estado de 'esFavorito' a cada personaje.
+ *
+ *  @returns {void} - Nada se devuelve desde las funciones de acción ya que su propósito es actualizar el estado en la tienda Redux.
+ */
