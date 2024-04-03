@@ -30,3 +30,9 @@ const PaginaFavoritos = () => {
 };
 
 export default PaginaFavoritos;
+
+/**
+ * Componente de PaginaFavoritos que muestra todos los personajes que han sido marcados como favoritos.
+ * Utiliza la Redux Store para acceder a la lista de elementos favoritos y los renderiza en un estilo de grilla utilizando el componente TarjetaPersonaje.
+ * @returns {JSX.Element} - Elemento JSX que representa la página completa de personajes favoritos incluyendo el título y los personajes favoritos.
+ */
